@@ -8,7 +8,18 @@ describe('Item.vue', () => {
     }
     const wrapper = shallowMount(Item, {
       propsData: { item }
-      })
+    })
     expect(wrapper.text()).toContain(item.url)
   })
+
+  test('renders item.score', () => {
+    const item = {
+      score: 20
+    }
+    const wrapper = shallowMount(Item, {
+      propsData: { item }
+    })
+    expect(wrapper.text()).toContain(item.score)
+  })
+
 })

@@ -1,6 +1,7 @@
 <template>
   <li>
     {{item.url}}
+    {{item.score}}
   </li>
 </template>
 
