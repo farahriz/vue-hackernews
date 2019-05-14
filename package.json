@@ -49,15 +49,15 @@
       "autoprefixer": {}
     }
   },
+  "jest": {
+    "transform": {
+      "^.+\\.vue$": "vue-jest",
+      "^.+\\.(js|jsx)?$": "<rootDir>/node_modules/babel-jest"
+    }
+  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ],
-  "jest": {
-    "transform": {
-      "^.+\\.js$": "babel-jest",
-      "^.+\\.vue$": "vue-jest"
-    }
-  }
+  ]
 }
