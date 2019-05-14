@@ -1,5 +1,11 @@
 <template>
-  <div>
-    item
-  </div>
+  <li>
+    {{item.url}}
+  </li>
 </template>
+
+<script>
+  export default {
+    props: ['item']
+  }
+</script>
