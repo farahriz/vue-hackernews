@@ -1,6 +1,6 @@
 <template>
   <div
-    class="hidden"
+    :class="{hidden: hidden}"
     :style="{
     'width': '0%'
   }" />
@@ -9,8 +9,15 @@
 
 <script>
 export default {
+  data() {
+    return {
+      hidden: true
+    }
+  },
   methods: {
-    start() {},
+    start() {
+      this.hidden = false
+    },
     finish() {}
   }
 }
