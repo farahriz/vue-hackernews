@@ -5,3 +5,13 @@
     'width': '0%'
   }" />
 </template>
+
+
+<script>
+export default {
+  methods: {
+    start() {},
+    finish() {}
+  }
+}
+</script>
