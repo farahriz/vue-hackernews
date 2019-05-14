@@ -9,7 +9,7 @@ describe('ItemList.vue', () => {
         const items = wrapper.findAll(Item)
         expect(wrapper.findAll(Item)).toHaveLength(window.items.length)
         items.wrappers.forEach((wrapper, i) => {
-            expect(wrapper.props().item).toBe(winodw.items[i])
+            expect(wrapper.props().item).toBe(window.items[i])
         })
     })
 
