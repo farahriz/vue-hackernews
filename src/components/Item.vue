@@ -2,6 +2,7 @@
   <li>
     {{item.url}}
     {{item.score}}
+    Written by {{item.by}}
   </li>
 </template>
 
