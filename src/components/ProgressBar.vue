@@ -1,7 +1,9 @@
 <template>
-    <div class="hidden">
-
-    </div>
+  <div
+    class="hidden"
+    :style="{
+    'width': '0%'
+  }" />
 </template>
 
 <script>
@@ -9,3 +11,7 @@
     
   }
 </script>
+
+<style>
+
+</style>
