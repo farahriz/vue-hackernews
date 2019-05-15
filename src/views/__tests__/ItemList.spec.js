@@ -12,4 +12,13 @@ describe('ItemList.vue', () => {
       expect(wrapper.props().item).toBe(window.items[i])
     })
   })
+
+  test('calls $bar start on load', () => {
+    const $bar = {
+      start: jest.fn(),
+      finish: () => {}
+    }
+    shallowMount(ItemList, {mocks: { $bar }})
+    expect($bar.start).toHaveBeenCalledTimes(1)
+  })
 })
