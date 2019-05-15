@@ -12,7 +12,7 @@
 
 <script>
 import Item from '../components/Item.vue'
-  import { fetchListData } from '../api/api'
+import { fetchListData } from '../api/api'
 
 export default {
   components: {
@@ -30,10 +30,11 @@ export default {
     loadItems () {
       this.$bar.start()
       fetchListData('top')
-      .then(items => {
-        this.displayItems = items
-        this.$bar.finish()
-      })
+        .then(items => {
+          this.displayItems = items
+          this.$bar.finish()
+        })
+        .catch(() => this.$bar.fail())
     }
   }
 }
