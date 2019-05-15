@@ -43,4 +43,12 @@ describe('ProgressBar.vue', () => {
     expect(wrapper.element.style.width).toBe('50%')
   })
 
+  test('clears timer when finish is called', () => {
+    jest.spyOn(window, 'clearInterval')
+    setInterval.mockReturnValue(123)
+    const wrapper = shallowMount(ProgressBar)
+    wrapper.vm.start()
+    wrapper.vm.finish()
+    expect(window.clearInterval).toHaveBeenCalledWith(123)
+  })
 })

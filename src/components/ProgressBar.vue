@@ -27,6 +27,7 @@ export default {
     finish() {
       this.hidden = true
       this.percent = 100
+      clearInterval(this.timer)
     }
   }
 }
