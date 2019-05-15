@@ -45,4 +45,17 @@ describe('ItemList.vue', () => {
     expect($bar.finish).toHaveBeenCalled()
   })
 
+  test('calls $bar.fail when load unsuccessful', async () => {
+    expect.assertions(1)
+    const $bar = {
+      start: () => {},
+      fail: jest.fn()
+    }
+    fetchListData. mockRejectedValueOnce()
+    shallowMount (ItemList, {mocks: {$bar}})
+    await flushPromises()
+
+    expect($bar.fail).toHaveBeenCalled()
+  })
+
 })
