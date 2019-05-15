@@ -1,7 +1,8 @@
 <template>
  <div
     :class="{
-    hidden: hidden
+    hidden: hidden,
+    error: error
   }"
   :style="{
     'width': `${percent}%`
