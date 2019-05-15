@@ -5,14 +5,14 @@ import { fetchListData } from './api/api'
 
 Vue.config.productionTip = false
 
-fetchListData('top')
-  .then((items) => {
-    window.items = items
-    new Vue({
-      el: '#app',
-      render: h => h(App)
-    })
-  })
+// fetchListData('top')
+//   .then((items) => {
+//     window.items = items
+//     new Vue({
+//       el: '#app',
+//       render: h => h(App)
+//     })
+//   })
 
 const bar = new Vue(ProgressBar).$mount()
 Vue.prototype.$bar = bar
